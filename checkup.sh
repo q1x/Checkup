@@ -20,7 +20,7 @@ ver=1.02
 # Define default hosts to check, can be IP addresses or (resolvable) hostnames, seperated by spaces.
 # 
 
-checkhosts="starbuck.qixia.nl schiedam.the-wired.net barendrecht.the-wired.net"
+checkhosts="www.google.com www.hotmail.com www.apple.com"
 
 #
 # Set the defaul t timer value.
