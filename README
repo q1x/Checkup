@@ -1,0 +1,8 @@
+ Checkup.sh - Script to check if host is alive and keep a log file while running.
+              It depends on fping being installed and in path.
+              Output is color-coded for easy viewing.
+
+ By Raymond Kuiper (qix at the-wired dot net)
+
+ Lisence:	GPLv3  (http://www.gnu.org/licenses/gpl.html)
+
