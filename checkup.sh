@@ -14,7 +14,7 @@
 #
 # Set version number for internal reference.
 #
-ver=1.02
+ver=1.03
 
 #
 # Define default hosts to check, can be IP addresses or (resolvable) hostnames, seperated by spaces.
@@ -43,7 +43,7 @@ nolog=0
 #
 # Define the location of the log file.
 #
-log="/tmp/checkup.log"
+log="/tmp/checkup_$(date +%s).log"
 
 #
 # Set seperator for the logfile. This allows the specification of the seperator between te fields in the logfile.
@@ -159,7 +159,7 @@ do
 #
 #		Take a timestamp and test host availability
 #
-		timestamp=`date +%Y-%m-%d_%H:%S`
+		timestamp=`date +%Y-%m-%d_%H:%M:%S`
 		status=`$fping -t 50 "$host"  2> /dev/null | grep "$host is " | cut -d " " -f 3`
 
 #
