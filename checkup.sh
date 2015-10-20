@@ -14,7 +14,7 @@
 #
 # Set version number for internal reference.
 #
-ver=1.03
+ver=1.04
 
 #
 # Define default hosts to check, can be IP addresses or (resolvable) hostnames, seperated by spaces.
@@ -32,6 +32,11 @@ timer=30
 # Define fping path.
 #
 fping="/usr/sbin/fping"
+
+#
+# FPing timeout
+#
+timeout=50
 
 #
 # Set nolog value, if 0 logging to file is performed.
@@ -160,7 +165,7 @@ do
 #		Take a timestamp and test host availability
 #
 		timestamp=`date +%Y-%m-%d_%H:%M:%S`
-		status=`$fping -t 50 "$host"  2> /dev/null | grep "$host is " | cut -d " " -f 3`
+		status=`$fping -t "$timeout" "$host"  2> /dev/null | grep "$host is " | cut -d " " -f 3`
 
 #
 #		set variables to use for color coding and status logging.
